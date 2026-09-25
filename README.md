@@ -1,81 +1,72 @@
-# ClearRead
+ClearRead Privacy Policy
 
-ClearRead is a browser extension designed to make web content easier to read, especially for individuals with dyslexia or anyone who prefers a clearer, simplified reading experience.  
-It enhances accessibility by applying customizable fonts, spacing, color filters, focus tools, and AI-powered text simplification—all while respecting user privacy.
+Effective date: 25 September 2026
+Last updated: 25 September 2026
 
----
+ClearRead is a browser extension that makes web pages easier to read. This policy explains exactly what the extension does and does not do with your information.
 
-## ✨ Features
+The short version
 
-- **Dyslexia-Friendly Fonts** – Switch to fonts that improve readability.
-- **Adjustable Spacing** – Change letter and line spacing using an intuitive slider.
-- **Sepia Filter** – Reduce glare and eye strain with a soft background filter.
-- **Reader Line** – A horizontal guide that helps keep your place while reading.
-- **Read Aloud** – Listen to page content spoken out loud.
-- **AI Text Simplification** – Instantly simplify complex text into shorter, clearer summaries.
-- **Recommended Settings** – Apply pre-configured, balanced settings for dyslexia support.
-- **Reset** – Revert any changes and return to the original webpage view.
+ClearRead does not collect, sell, or share your personal data, browsing history, or usage analytics. Everything the extension does to a page happens in your browser. Two features can send data off your device, and both are described in full below: signing in to sync your settings, and cloud text simplification when your device cannot do it locally.
 
-All features are designed to be toggled on/off easily to create a personalized, dyslexia-friendly browsing experience.
+What ClearRead stores
 
----
+Your reading settings. Font, letter and line spacing, line width, colour overlay, reading mode, reader line, and text-to-speech voice and speed. These are saved through the browser's own extension storage so your setup is there next time you read.
 
-## 🔒 Privacy & Data Handling
+If you are not signed in, these never leave your browser.
 
-ClearRead places **privacy first** and is built to respect and protect user data:
+Your account, if you create one. Signing in is optional. ClearRead works fully without an account. If you do sign in, we store your email address, an account identifier, and your reading settings on our database provider, Supabase, so your settings follow you between devices. Authentication uses OAuth; ClearRead never sees or stores your password.
 
-- The extension does **not** collect, store, track, or sell any personal data, browsing history, or usage information.
-- All visual adjustments (fonts, spacing, filters, reader line) are applied **locally in the user's browser** without transmitting data externally.
-- When users choose to simplify text using the AI feature, the selected webpage text is **temporarily sent to the Hugging Face Inference API** solely to receive a simplified version.
-- **Hugging Face Inference API does *not* store, log, track, or reuse this text.** It processes the text in real time and returns the simplified content without retaining user data.
-- No user-identifiable data, metadata, or browsing history is ever shared with Hugging Face or any other third party.
-- ClearRead does **not** use any data for advertising, analytics, or resale.
+What ClearRead does not store
+Page content, page text, or page URLs
+Browsing history or the sites you visit
+Text you have spoken aloud or simplified
+Cookies, advertising identifiers, or device fingerprints
+Analytics, telemetry, or usage tracking of any kind
+Text simplification
 
-This approach ensures a secure, private experience while still offering advanced AI-based simplification.
+When you select text and ask ClearRead to simplify it, the extension first tries to run the model built into your browser. In that case the text never leaves your device.
 
----
+If your browser does not support on-device simplification, ClearRead asks you before sending anything. Only the text you selected is sent, over an encrypted connection, to Google's Gemini API, which returns the simplified version. The text is not attached to your account, is not stored by ClearRead, and is not used to train any model. Google's handling of that request is governed by its own API terms. If you decline, the feature is simply unavailable and nothing is sent.
 
-## ⚙️ Permissions & Why They’re Needed
+Reading aloud
 
-| Permission                                            | Purpose                                                                                                        |
-|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| `scripting`                                          | To inject scripts and styles that apply fonts, spacing adjustments, filters, and reader lines.                |
-| `activeTab`                                          | To modify and apply changes only on the currently active browser tab, based on user actions.                   |
-| `tabs`                                               | To identify the correct tab for applying features like Read Aloud and resetting changes.                       |
-| `storage`                                            | To save user preferences (e.g., chosen font, spacing settings) so they persist across sessions.                |
-| `host_permissions` to `https://api-inference.huggingface.co/` | Required to securely send selected text to Hugging Face for AI text simplification.                            |
+Text-to-speech uses the voices already installed in your browser or operating system. The text stays on your device.
 
-All permissions are strictly limited to the functionalities users request and do not enable background tracking or data collection.
+PDFs
 
----
+PDFs you open in ClearRead's viewer are rendered locally in your browser. The file is never uploaded anywhere.
 
-## 📦 Installation
+Permissions
 
-1. Download or clone this repository.
-2. Open your browser and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** in the top right.
-4. Click **Load unpacked** and select the folder containing this extension.
+Each permission ClearRead requests exists to deliver a feature you asked for.
 
----
+Permission	Why
+scripting	Applies your fonts, spacing, colours, and reader line to the page
+activeTab	Acts on the one tab you are reading, only after you click
+storage	Saves your reading settings
+sidePanel	Shows the controls beside the page while you read
+contextMenus	Right-click access to read aloud and apply your settings
+webNavigation	Re-applies your settings when a site changes page without reloading
+alarms	Refreshes your sign-in session and retries failed settings syncs
 
-## 📜 License
+No permission is used for tracking, advertising, or background collection.
 
-MIT License – free to use, modify, and distribute for personal or educational purposes.
+Your control over your data
 
----
+Your settings are yours. You can reset them at any time from the extension, and removing ClearRead from your browser deletes everything stored locally.
 
-## 🛡 Product Disclosure
+If you have an account and want it deleted, email the address below. We will delete your account record and all settings associated with it within 30 days.
 
-ClearRead does **not** collect or store any personal data or browsing history.  
-For text simplification only, selected webpage text is processed by the [Hugging Face Inference API](https://huggingface.co/) to generate simpler content.  
-This data is processed in real time and **not stored or logged** by Hugging Face. No personal information is ever shared, sold, or used for advertising.
+Children
 
----
+ClearRead is not directed at children under 13 and we do not knowingly collect information from them. [If ClearRead will be used in schools, say so here and name your position on student data — IRIS reviewers and school IT both look for this.]
 
-## 📩 Contact
+Changes to this policy
 
-For questions, feedback, or support, please contact:  
-📧 projectclearread@gmail.com
+If this policy changes in a way that affects what ClearRead does with your data, we will update the effective date above and note the change in the extension's release notes.
 
----
+Contact
 
+projectclearread@gmail.com
+[Add a postal or organisational address if one is required by your listing.]
